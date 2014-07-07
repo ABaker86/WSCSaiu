@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/MainStyle.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body id="home">
+    <form runat="server">
+    <div id="container">
+
+    <div id="watermark">
+         <p>AquaGear.com</p>
+    </div>
+    
+    <div id="header">
+         <h1>AQua Gear</h1>
+    </div>
+    
+    <ul id="nav">
+        <li><asp:HyperLink ID="hlHomeNav" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink></li>
+
+        <li><asp:HyperLink ID="hlFishNav" runat="server" NavigateUrl="~/Fish.aspx">Fish</asp:HyperLink></li>
+        <li>
+            <asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink></li>
+    </ul>
+    
+    <div id="sidebar">
+        <h1>Categories</h1>
+        <ul id="sidebarnav">
+            <li><a href="#">a link</a></li>
+            <li><a href="#">another link</a></li>
+        </ul>
+    </div>
+        <asp:ContentPlaceHolder ID="cphContent" runat="server">
+            <p>
+                &nbsp;</p>
+        </asp:ContentPlaceHolder>
+         <div id="ads">
+             <asp:ContentPlaceHolder ID="cphAddSpace" runat="server">
+             </asp:ContentPlaceHolder>
+         <p>Space reserved for text advertisements</p>
+    </div>
+    
+    <div id="footer">
+        <p>
+        <a href="#">Privacy</a> | <a href="#">Terms</a>
+        </p>
+    
+        <p>
+        Valid XHTML| Valid CSS
+        </p>
+    
+        <p>&copy; 2007 AquaGear | template design by <a href="http://www.webtom.be">webtom.be</a></p>
+    </div>   
+           
+    </form>
+</body>
+</html>
